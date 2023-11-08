@@ -9,17 +9,34 @@
 std::vector<int> GenerateRandVec(int numOfNums, int min, int max);
 void BubbleSort(std::vector<int> &theVec);
 
+int Factorial(int number);
+
 int main()
 {
-    std::vector<int> vecVals =  GenerateRandVec(10, 1, 50);
-    BubbleSort(vecVals);
+    // std::vector<int> vecVals =  GenerateRandVec(10, 1, 50);
+    // BubbleSort(vecVals);
 
-    for (auto x: vecVals) std::cout << x << "\n";
+    // for (auto x: vecVals) std::cout << x << "\n";
+
+    std::cout << "Factorial 6 = " << Factorial(6) << "\n";
     
     
 
 
     return 0;
+}
+
+int Factorial(int number){
+    if (number ==1)
+    {
+        return 1;
+    }else
+    {
+       return  number *Factorial(number-1);
+
+    }
+    
+    
 }
 
 std::vector<int> GenerateRandVec(int numOfNums, int min, int max)
