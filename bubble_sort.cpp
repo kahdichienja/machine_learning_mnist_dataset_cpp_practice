@@ -5,6 +5,27 @@
 #include <sstream>
 #include <ctime>
 #include <cmath>
+class Singleton
+{
+private:
+    static Singleton* instance;
+    Singleton(){}
+
+public:
+    static Singleton* getInstance(){
+        if (!instance)
+        {
+            instance = new Singleton();
+
+            std::cout << "New instance";
+
+            return instance;
+        }else {
+            std::cout << "Already instanciated";
+            return instance;
+        }
+    };
+};
 
 std::vector<int> GenerateRandVec(int numOfNums, int min, int max);
 void BubbleSort(std::vector<int> &theVec);
@@ -18,8 +39,10 @@ int main()
 
     // for (auto x: vecVals) std::cout << x << "\n";
 
-    std::cout << "Factorial 6 = " << Factorial(6) << "\n";
-    
+    // std::cout << "Factorial 6 = " << Factorial(6) << "\n";
+
+    Singleton* obj1 = Singleton::getInstance();    
+    // Singleton* obj2 = Singleton::getInstance();    
     
 
 
@@ -88,3 +111,5 @@ void BubbleSort(std::vector<int> &theVec){
         i -=1;
     }
 }
+
+
