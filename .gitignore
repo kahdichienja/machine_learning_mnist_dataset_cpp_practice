@@ -1,3 +1,5 @@
-.vscode/**.json
+.vscode/launch.json
+.vscode/settings.json
 bubble_sort
 **.dSYM/
+build/
