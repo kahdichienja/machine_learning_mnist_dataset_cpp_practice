@@ -1,7 +1,7 @@
 #! /bin/bash
 
 if [[ -z $MNIST_ML_ROOT ]]; then
-    ech "Please define MNIST_ML_ROOT"
+    echo "Please define MNIST_ML_ROOT"
     exit 1
 
 fi
