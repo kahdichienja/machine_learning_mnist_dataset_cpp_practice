@@ -1,7 +1,6 @@
 #include <iostream>
 #include <string>
 #include "httplib.h"
-#define CPPHTTPLIB_OPENSSL_SUPPORT 
 #include "json.hpp"
 using namespace std;
 using json = nlohmann::json;
