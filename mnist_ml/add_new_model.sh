@@ -3,7 +3,6 @@
 if [[ -z $MNIST_ML_ROOT ]]; then
     echo "Please define MNIST_ML_ROOT"
     exit 1
-
 fi
 
 dir = $(echo "$@" | tr a-z A-Z) #make input upper case
